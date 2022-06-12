@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" controller="AnimalController" access="global">
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:handler name='init' action="{!c.getAnimalsFunction}" value="{!this}"/>
+    <lightning:card title="Animals List">
+        <lightning:datatable keyField="id"
+                             data="{!v.data}"
+                             columns="{!v.columns}"
+                             hideCheckboxColumn="true"/>
+    </lightning:card>
+</aura:component>

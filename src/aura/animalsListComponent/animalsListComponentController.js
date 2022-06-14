@@ -3,6 +3,7 @@
         var recordId = component.get("v.recordId");
         component.set('v.columns', [
             { label: 'Id', fieldName: 'id', type: 'text' },
+            { label: 'Name', fieldName: 'name', type: 'text' },
             { label: 'Weight', fieldName: 'weight', type: 'text' },
             { label: 'Country', fieldName: 'country', type: 'text' },
             { label: 'Use Origin Data (Template)', fieldName: 'useOriginData', type: 'text' },
@@ -24,6 +25,7 @@
 
                 animals.forEach(animal => {
                     animal.id = animal.animal.Id;
+                    animal.name = animal.animal.Name;
                     animal.useOriginData = animal.animal.Animal_Template__r.Use_Origin_Data__c;
                     animal.originDataRecordExists = animal.animalOrigin == undefined ? `false (non-Origin data will be used)` : true;
 

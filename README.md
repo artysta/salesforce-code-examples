@@ -10,6 +10,8 @@ The relation between the Animal and Animal Origin objects is **one to many**, so
 
 We want to achieve something like this:
 
+<img src="./js-datatable.png"/>
+
 The problem here is that the "main" object that we are using to fill the datatable is Animal and it is a parent for the Animal Origin object. So we cannot just use the "dot notation" to access fields of the related object (we could do this if the Animal object were a child of the Animal Origin object).
 
 This example presents the way to use the wrapper class that wraps Animal and Animal Origin records that are related to each other.
